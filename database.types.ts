@@ -37,51 +37,63 @@ export type Database = {
       project: {
         Row: {
           created_at: string
+          description: string[] | null
+          dev_model: string | null
           duration: string | null
           freamwork: string | null
           id: string
           language: string | null
           libraries: string | null
-          overview: string | null
+          overview: string[] | null
+          pic_url: string | null
           role: string | null
           start_date: string | null
           tasks: string | null
-          team_size: number | null
+          team_size: string | null
           title: string | null
           tools: string | null
           total_members: string | null
+          user_lang: string | null
         }
         Insert: {
           created_at?: string
+          description?: string[] | null
+          dev_model?: string | null
           duration?: string | null
           freamwork?: string | null
           id?: string
           language?: string | null
           libraries?: string | null
-          overview?: string | null
+          overview?: string[] | null
+          pic_url?: string | null
           role?: string | null
           start_date?: string | null
           tasks?: string | null
-          team_size?: number | null
+          team_size?: string | null
           title?: string | null
           tools?: string | null
           total_members?: string | null
+          user_lang?: string | null
         }
         Update: {
           created_at?: string
+          description?: string[] | null
+          dev_model?: string | null
           duration?: string | null
           freamwork?: string | null
           id?: string
           language?: string | null
           libraries?: string | null
-          overview?: string | null
+          overview?: string[] | null
+          pic_url?: string | null
           role?: string | null
           start_date?: string | null
           tasks?: string | null
-          team_size?: number | null
+          team_size?: string | null
           title?: string | null
           tools?: string | null
           total_members?: string | null
+          user_lang?: string | null
         }
         Relationships: []
       }

@@ -1,0 +1,8 @@
+.link {
+  color: #ffffff;
+  padding: 0.5rem 0.75rem;
+  transition: background-color 0.2s ease;
+  text-decoration: none;
+  color: inherit;
+  font-size: large;
+}

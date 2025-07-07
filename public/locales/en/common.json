@@ -1,0 +1,20 @@
+{
+  "greeting": "Hello",
+  "sample": "Welcome to our site!",
+  "start_date": "Start_date",
+  "role": "Role",
+  "team_size": "Team_size",
+  "duration": "Duration",
+  "tasks": "Tasks",
+  "total_members": "Total_members",
+  "language": "Language",
+  "freamwork": "Freamwork",
+  "libraries": "Libraries",
+  "tools": "Tools",
+  "overview": "Overview",
+  "description": "Description",
+  "dev_model": "Dev_model",
+  "front": "Front",
+  "server": "Server",
+  "achivements": "Achivements"
+}

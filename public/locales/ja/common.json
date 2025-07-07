@@ -1,0 +1,19 @@
+{
+  "greeting": "こんにちは",
+  "sample": "サイトへようこそ！",
+  "start_date": "開始月",
+  "role": "担当",
+  "team_size": "チーム人数",
+  "duration": "期間",
+  "tasks": "担当工程",
+  "total_members": "PJ全担人数",
+  "language": "言語",
+  "freamwork": "フレームワーク",
+  "libraries": "ライブラリ",
+  "tools": "ツール・その他",
+  "overview": "プロジェクト概要",
+  "description": "業務内容",
+  "dev_model": "開発手法",
+  "front": "フロント側",
+  "server": "サーバ側"
+}

@@ -1,15 +1,7 @@
-import Link from 'next/link'
 import { notFound } from 'next/navigation'
-import type { Database } from '../../../database.types'
 import { createClient } from '../../utils/supabase/server'
-
-type PageProps = {
-  params: {
-    projectId: string
-  }
-}
-
-type Project = Database['public']['Tables']['project']['Row']
+import * as React from 'react'
+import { Project, PropjectPageProps } from '@/app/types/project'
 
 async function fetchProject(projectId: string) {
   const supabase = await createClient()
@@ -22,12 +14,32 @@ async function fetchProject(projectId: string) {
   return project[0]
 }
 
-export default async function ProjectDetailPage({ params }: PageProps) {
+export default async function ProjectDetailPage({ params }: PropjectPageProps) {
   const project: Project = await fetchProject(params.projectId)
+
+  const user_lang = project.user_lang as string
 
   return (
     <div>
-      <p>{project.title}</p>
+      <div>
+        <div>
+          <p></p>
+        </div>
+        <p>{project.start_date}</p>
+        <p>{project.role}</p>
+        <p>{project.total_members}</p>
+        <p>{project.duration}</p>
+        <p>{project.tasks}</p>
+        <p>{project.language}</p>
+        <p>{project.freamwork}</p>
+        <p>{project.libraries}</p>
+        <p>{project.tools}</p>
+        <ul>
+          {project.overview?.map((item) => (
+            <li>{item}</li>
+          ))}
+        </ul>
+      </div>
     </div>
   )
 }
