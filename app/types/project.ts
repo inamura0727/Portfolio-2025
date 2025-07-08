@@ -20,8 +20,6 @@ export type ModalProps = {
 }
 
 export type ProjectDetailProps = {
-  detailData: {
-    project: ProjectWithParseData
-    setIsOpen: React.Dispatch<React.SetStateAction<boolean>>
-  }
+  project: ProjectWithParseData
+  setIsOpen: React.Dispatch<React.SetStateAction<boolean>>
 }

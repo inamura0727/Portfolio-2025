@@ -24,7 +24,7 @@ export const ProjectModal = ({ project }: ModalProps) => {
       <Modal open={isOpen} onClose={() => setIsOpen(false)}>
         {/* TODO: Add a function to change the display language based on the user's preferred language. */}
         {/* <ProjectDetailJa detailData={detailData} /> */}
-        <ProjectDetailEn detailData={detailData} />
+        <ProjectDetailEn {...detailData} />
       </Modal>
     </>
   )
