@@ -1,14 +1,16 @@
 'use client'
 
 import { Button, Modal } from '@mui/material'
-import { useState } from 'react'
+import { useEffect, useState } from 'react'
 import '../../i18n'
-import { ModalProps } from '../types/project'
+import { ModalProps, ProjectWithParseData } from '../types/project'
 import { ProjectDetailEn } from './projectDetail_en'
+import { useLangStore } from '../utils/zustand/initial'
+import { ProjectDetailJa } from './projectDetail_ja'
 
 export const ProjectModal = ({ project }: ModalProps) => {
   const [isOpen, setIsOpen] = useState(false)
-
+  const language = useLangStore((state) => state.language)
   const detailData = { project, setIsOpen }
 
   return (
@@ -22,9 +24,11 @@ export const ProjectModal = ({ project }: ModalProps) => {
         See More
       </Button>
       <Modal open={isOpen} onClose={() => setIsOpen(false)}>
-        {/* TODO: Add a function to change the display language based on the user's preferred language. */}
-        {/* <ProjectDetailJa detailData={detailData} /> */}
-        <ProjectDetailEn {...detailData} />
+        {language === 'en' ? (
+          <ProjectDetailEn {...detailData} />
+        ) : (
+          <ProjectDetailJa {...detailData} />
+        )}
       </Modal>
     </>
   )

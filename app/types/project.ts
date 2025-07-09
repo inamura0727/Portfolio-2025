@@ -13,6 +13,7 @@ export type PropjectPageProps = {
 export type ProjectWithParseData = Project & {
   front: string[]
   server: string[]
+  achievement: string[]
 }
 
 export type ModalProps = {

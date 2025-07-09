@@ -1,7 +1,7 @@
 'use client'
-import { Box, IconButton, Typography, Stack } from '@mui/material'
+import { IconButton, Typography, Stack } from '@mui/material'
 import { useTranslation } from 'react-i18next'
-
+import Box from '@mui/material/Box'
 import HighlightOffIcon from '@mui/icons-material/HighlightOff'
 import { ProjectDetailProps } from '../types/project'
 import { forwardRef, useEffect } from 'react'
@@ -51,7 +51,7 @@ export const ProjectDetailEn = forwardRef<HTMLDivElement, ProjectDetailProps>(
                 right: 8,
               }}
             >
-              <HighlightOffIcon onClick={() => setIsOpen(false)} />
+              <HighlightOffIcon />
             </IconButton>
           </Box>
           <Typography sx={{ fontSize: '24px', fontWeight: 'bold' }}>
@@ -198,19 +198,20 @@ export const ProjectDetailEn = forwardRef<HTMLDivElement, ProjectDetailProps>(
                 </Box>
                 <Box sx={{ width: '40rem' }}>
                   <ul>
-                    {project.overview?.map((item) => (
-                      <li>{item}</li>
+                    {project.overview?.map((item, i) => (
+                      <li key={i}>{item}</li>
                     ))}
                   </ul>
                 </Box>
               </Stack>
             </Stack>
-            {project.front.length > 0 && (
+            {project.achievement.length > 0 && (
               <Stack
                 sx={{
                   borderBottom: '1px solid',
                   padding: 0.5,
                 }}
+                key={project.id}
               >
                 <Stack
                   direction="row"
@@ -220,35 +221,12 @@ export const ProjectDetailEn = forwardRef<HTMLDivElement, ProjectDetailProps>(
                   }}
                 >
                   <Box sx={{ width: '15rem' }}>
-                    <Typography>{t('front')}</Typography>
+                    <Typography>{t('achievement')}</Typography>
                   </Box>
                   <Box sx={{ width: '40rem' }}>
                     <ul>
-                      {project.front.map((item) => (
-                        <li>{item}</li>
-                      ))}
-                    </ul>
-                  </Box>
-                </Stack>
-              </Stack>
-            )}
-
-            {project.server.length > 0 && (
-              <Stack>
-                <Stack
-                  direction="row"
-                  spacing={2}
-                  sx={{
-                    padding: 0.5,
-                  }}
-                >
-                  <Box sx={{ width: '15rem' }}>
-                    <Typography>{t('server')}</Typography>
-                  </Box>
-                  <Box sx={{ width: '40rem' }}>
-                    <ul>
-                      {project.server.map((item) => (
-                        <li>{item}</li>
+                      {project.achievement.map((item, i) => (
+                        <li key={i}>{item}</li>
                       ))}
                     </ul>
                   </Box>
