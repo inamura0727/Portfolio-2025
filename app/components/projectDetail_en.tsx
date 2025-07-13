@@ -106,14 +106,6 @@ export const ProjectDetailEn = forwardRef<HTMLDivElement, ProjectDetailProps>(
                       <Typography>{project.total_members}</Typography>
                     </Stack>
                   </Box>
-                  <Box sx={{ flex: 1 }}>
-                    <Stack direction="row" spacing={1}>
-                      <Typography sx={{ flexGrow: 1 }}>
-                        {t('dev_model')}
-                      </Typography>
-                      <Typography>{project.dev_model}</Typography>
-                    </Stack>
-                  </Box>
                 </Stack>
                 <Stack
                   direction="row"
@@ -197,11 +189,9 @@ export const ProjectDetailEn = forwardRef<HTMLDivElement, ProjectDetailProps>(
                   <Typography>{t('overview')}</Typography>
                 </Box>
                 <Box sx={{ width: '40rem' }}>
-                  <ul>
-                    {project.overview?.map((item, i) => (
-                      <li key={i}>{item}</li>
-                    ))}
-                  </ul>
+                  {project.overview?.map((item, i) => (
+                    <Typography key={i}>{item}</Typography>
+                  ))}
                 </Box>
               </Stack>
             </Stack>
