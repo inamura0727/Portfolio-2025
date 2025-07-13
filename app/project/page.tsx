@@ -44,11 +44,6 @@ export default async function ProjectsList() {
 
   return (
     <Box>
-      <Box>
-        <Typography sx={{ fontSize: '80px', fontWeight: 'bold' }}>
-          Project Experiences
-        </Typography>
-      </Box>
       <ProjectCardListComponent ui_data={ui_data} />
     </Box>
   )
