@@ -98,14 +98,12 @@ export const ProjectDetailEn = forwardRef<HTMLDivElement, ProjectDetailProps>(
                     padding: 0.5,
                   }}
                 >
-                  <Box sx={{ flex: 1 }}>
-                    <Stack direction="row" spacing={1}>
-                      <Typography sx={{ flexGrow: 1 }}>
-                        {t('total_members')}
-                      </Typography>
-                      <Typography>{project.total_members}</Typography>
-                    </Stack>
-                  </Box>
+                  <Typography sx={{ width: '10rem' }}>
+                    {t('total_members')}
+                  </Typography>
+                  <Typography sx={{ width: '30rem' }}>
+                    {project.total_members}
+                  </Typography>
                 </Stack>
                 <Stack
                   direction="row"
